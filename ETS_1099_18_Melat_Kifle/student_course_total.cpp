@@ -1,23 +1,27 @@
-#include <iostream>
+
+  #include <iostream>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
 int main() {
-    int units;
-    const double SERVICE_CHARGE = 10.0;
+    double assignment, midterm, finalExam;
     
-    cout << "Enter electricity units used (kWh): ";
-    cin >> units;
+    cout << "Enter assignment mark (0-100): ";
+    cin >> assignment;
+    cout << "Enter midterm mark (0-100): ";
+    cin >> midterm;
+    cout << "Enter final exam mark (0-100): ";
+    cin >> finalExam;
     
-    // Calculates the tiered pricing using the conditional operator instead of an 'if' statement
-    double energyCharge = (units <= 50) ? (units * 1.50) : (50 * 1.50 + (units - 50) * 2.00);
-    double totalBill = energyCharge + SERVICE_CHARGE;
+    double total = (assignment * 0.20) + (midterm * 0.30) + (finalExam * 0.50);
+    string status = (total >= 50) ? "Pass" : "Fail";
     
-    cout << fixed << setprecision(2);
-    cout << "\nEnergy Charge: " << energyCharge << " birr" << endl;
-    cout << "Service Charge: " << SERVICE_CHARGE << " birr" << endl;
-    cout << "Total Bill: " << totalBill << " birr" << endl;
+    cout << fixed << setprecision(1);
+    cout << "\nTotal Mark: " << total << endl;
+    cout << "Status: " << status << endl;
     
     return 0;
 }
+
