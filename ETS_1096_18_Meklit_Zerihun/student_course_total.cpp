@@ -1,47 +1,41 @@
-Task 1: Student Course Total
+# PROGRAMMING ASSIGNMENT
+## IPO CHARTS AND FLOWCHARTS
 
-▎Inputs
+---
 
-• Assignment mark (out of 100)
-• Midterm mark (out of 100)
-• Final exam mark (out of 100)
+# TASK 1: STUDENT COURSE TOTAL
 
-▎Process
+## 1. IPO CHART
 
-1. Read the three marks.
-2. Calculate the weighted total:
-totalMark = (0.20 × assignmentMark) +
-(0.30 × midtermMark) +
-(0.50 × finalMark)
+| INPUT | PROCESS | OUTPUT |
+|---|---|---|
+| Assignment mark | Multiply assignment mark by 20% | Course total |
+| Midterm mark | Multiply midterm mark by 30% | Pass or Fail |
+| Final mark | Multiply final mark by 50% | |
+| | Add the three weighted marks | |
+| | Use conditional operator: total >= 50 ? Pass : Fail | |
 
-3. Use the conditional operator to determine the status:
-   – If totalMark >= 50, status is “Pass”.
-   – Otherwise, status is “Fail”.
+### Calculation formula
 
-▎Output
+Course Total = (Assignment × 0.20) + (Midterm × 0.30) + (Final × 0.50)
 
-Display the total mark to one decimal place and the status.
-#include <iostream>
-#include <iomanip>
-#include <string>
+Pass/Fail = Total >= 50 ? "Pass" : "Fail"
 
-using namespace std;
+## 2. FLOWCHART
 
-int main() {
-double assignmentMarks, midtermMarks, finalMarks;
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Enter assignment mark, midterm mark and final mark/]
+    B --> C[Calculate weighted assignment mark]
+    C --> D[Calculate weighted midterm mark]
+    D --> E[Calculate weighted final mark]
+    E --> F[Add all weighted marks]
+    F --> G{Is total >= 50?}
+    G -->|Yes| H[Result = Pass]
+    G -->|No| I[Result = Fail]
+    H --> J[/Display total and result/]
+    I --> J
+    J --> K([End])
+```
 
-cout << "Enter assignment mark (0-100): ";
-cin >> assignmentMarks;
-cout << "Enter midterm mark (0-100): ";
-cin >> midtermMarks;
-cout << "Enter final mark (0-100): ";
-cin >> finalMarks;
-
-double totalMark = (assignmentMarks * 0.20) + (midtermMarks * 0.30) + (finalMarks * 0.50);
-string result = (totalMark >= 50.0) ? "Pass" : "Fail";
-
-cout << fixed << setprecision(1);
-cout << "Total: " << totalMark << " and " << result << endl;
-
-return 0;
-}
+---
