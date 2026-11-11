@@ -1,5 +1,5 @@
-## Task 1: Student Course Total
-
+Flowcharts for All Tasks
+Task 1: Student Course Total
 flowchart TD
     A([Start]) --> B[/Input assignment, midterm and final marks/]
     B --> C[Calculate weighted total]
@@ -10,20 +10,18 @@ flowchart TD
     F --> H[/Display total and Fail/]
     G --> I([End])
     H --> I
-## Task 2: Electricity Bill
-
+Task 2: Electricity Bill
 flowchart TD
     A([Start]) --> B[/Input electricity units/]
     B --> C{Units <= 50?}
     C -->|Yes| D[Energy = Units * 1.50]
-    C -->|No| E[Energy = 75 + Units above 50 * 2.00]
+    C -->|No| E[Energy = 75 + (Units - 50) * 2.00]
     D --> F[Service charge = 10]
     E --> F
     F --> G[Total bill = Energy + Service]
     G --> H[/Display energy, service and total bill/]
     H --> I([End])
-## Task 3: Trip Speed and Fuel Cost
-
+Task 3: Trip Speed and Fuel Cost
 flowchart TD
     A([Start]) --> B[/Input distance, hours, minutes, fuel consumption and price/]
     B --> C[Convert time to hours]
