@@ -1,5 +1,5 @@
-Task 1: Student Course Total
-## Input
+## Task 1: Student Course Total
+### Input
 - Assignment mark
 - Midterm mark
 - Final exam mark
@@ -11,12 +11,12 @@ Task 1: Student Course Total
 4. Use the conditional operator to determine whether the student passes or fails (pass mark = 50).
 5. Display the course total to one decimal place and the result (Pass or Fail).
    
-## Output
+### Output
 - Course total.
 - Pass or Fail status.
 
-Task 2: Electricity Bill
-## Input
+## Task 2: Electricity Bill
+### Input
 - Electricity units consumed (kWh).
   
 ### Process
@@ -29,13 +29,13 @@ Task 2: Electricity Bill
 5. Calculate the total bill by adding the energy charge and service charge.
 6. Display the energy charge, service charge, and total bill to two decimal places.
    
-   ## Output
+   ### Output
 - Energy charge.
 - Service charge.
 - Total electricity bill.
 
-Task 3: Trip Speed and Fuel Cost
-## Input
+## Task 3: Trip Speed and Fuel Cost
+### Input
 - Trip distance (km).
 - Travel time in hours.
 - Travel time in minutes.
@@ -51,7 +51,7 @@ Task 3: Trip Speed and Fuel Cost
 6. Calculate the fuel cost by multiplying the fuel used by the price per liter.
 7. Display the average speed, fuel used, and fuel cost to two decimal places.
    
-   ## Output
+   ### Output
 - Average speed (km/h).
 - Fuel used (liters).
 - Fuel cost (birr).
