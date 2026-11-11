@@ -1,52 +1,28 @@
-▎Task 2: Electricity Bill
+# TASK 2: ELECTRICITY BILL
 
-▎(a) Inputs and Outputs
+## 1. IPO CHART
 
-Input
-• units — an integer representing the electricity used in kilowatt-hours (kWh).
+| INPUT | PROCESS | OUTPUT |
+|---|---|---|
+| Electricity units (kWh) | Check whether units are less than or equal to 50 | Energy charge |
+| | If units <= 50, multiply units by 1.50 birr | Service charge |
+| | Otherwise, calculate 50 × 1.50 + (units - 50) × 2.00 | Total bill |
+| | Add fixed service charge of 10 birr | |
+| | Use conditional operator (?:) | |
 
-Outputs
-• energyCharge — a double representing the cost of the electricity used, in birr.
-• serviceCharge — a double representing the fixed service charge of 10.00 birr.
-• totalBill — a double representing the total bill, in birr.
+### Calculation formula
 
-▎(b) Process
+Energy Charge = Units <= 50 ? Units × 1.50 : 50 × 1.50 + (Units - 50) × 2.00
 
-1. Read the number of electricity units used from the user.
-2. Set the service charge to a constant value of 10.00 birr.
-3. Calculate the energy charge using the conditional operator:
-   – If units <= 50:
-energyCharge = units × 1.50
+Service Charge = 10.00 birr
 
-• If units > 50:
-energyCharge = (50 × 1.50) + ((units - 50) × 2.00)
+Total Bill = Energy Charge + Service Charge
 
-or, equivalently:
-energyCharge = 75.00 + (units - 50) × 2.00
+## 2. FLOWCHART
 
-4. Calculate the total bill:
-totalBill = energyCharge + serviceCharge
-
-5. Display the energy charge, service charge, and total bill, each formatted to two decimal places.
-#include <iostream>
-#include <iomanip>
-
-using namespace std;
-
-int main() {
-int units;
-const double SERVICE_CHARGE = 10.00;
-
-cout << "Enter electricity units (kWh): ";
-cin >> units;
-
-double energyCharge = (units <= 50) ? (units * 1.50) : (50 * 1.50 + (units - 50) * 2.00);
-double totalBill = energyCharge + SERVICE_CHARGE;
-
-cout << fixed << setprecision(2);
-cout << "Energy charge: " << energyCharge << endl;
-cout << "Service charge: " << SERVICE_CHARGE << endl;
-cout << "Total bill: " << totalBill << endl;
-
-return 0;
-}
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Enter electricity units/]
+    B --> C{Are units <= 50?}
+    C -->|Yes| D[Energy = Units × 1.50]
+    C -->|No| E[Energy = 50 × 1.50 + Units above 
