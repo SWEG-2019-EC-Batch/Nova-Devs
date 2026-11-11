@@ -1,26 +1,46 @@
+
+# Task 1: Student Course Total
+
+```mermaid
 flowchart TD
-    A([START]) --> B[/Enter Assignment, Midterm and Final Marks/]
-    B --> C[Calculate Total = Assignment * 0.20 + Midterm * 0.30 + Final * 0.50]
+    A([Start]) --> B[/Input assignment, midterm and final marks/]
+    B --> C[Total = assignment * 0.20 + midterm * 0.30 + final * 0.50]
     C --> D{Total >= 50?}
-    D -->|YES| E[/Print Total and PASS/]
-    D -->|NO| F[/Print Total and FAIL/]
-    E --> G([END])
-    F --> G
+    D -->|Yes| E[Result = Pass]
+    D -->|No| F[Result = Fail]
+    E --> G[/Display total and Pass/]
+    F --> H[/Display total and Fail/]
+    G --> I([End])
+    H --> I
+```
+
+# Task 2: Electricity Bill
+
+```mermaid
 flowchart TD
-    A([START]) --> B[/Enter Electricity Units/]
+    A([Start]) --> B[/Input electricity units/]
     B --> C{Units <= 50?}
-    C -->|YES| D[Energy Charge = Units * 1.50]
-    C -->|NO| E[Energy Charge = 75 + Units Above 50 * 2.00]
-    D --> F[Service Charge = 10 Birr]
+    C -->|Yes| D[Energy = Units * 1.50]
+    C -->|No| E[Energy = 50 * 1.50 + (Units - 50) * 2.00]
+    D --> F[Service charge = 10]
     E --> F
-    F --> G[Total Bill = Energy Charge + Service Charge]
-    G --> H[/Print Energy Charge, Service Charge and Total Bill/]
-    H --> I([END])
+    F --> G[Total bill = Energy + Service charge]
+    G --> H[/Display energy charge, service charge and total bill/]
+    H --> I([End])
+```
+
+# Task 3: Trip Speed and Fuel Cost
+
+```mermaid
 flowchart TD
-    A([START]) --> B[/Enter Distance, Hours, Minutes, Fuel Consumption and Price Per Liter/]
-    B --> C[Total Time = Hours + Minutes / 60.0]
-    C --> D[Average Speed = Distance / Total Time]
-    D --> E[Fuel Used = Distance * Fuel Consumption / 100]
-    E --> F[Fuel Cost = Fuel Used * Price Per Liter]
-    F --> G[/Print Average Speed, Fuel Used and Fuel Cost/]
-    G --> H([END])
+    A([Start]) --> B[/Input distance, hours, minutes, fuel consumption and price per liter/]
+    B --> C[Time = hours + minutes / 60]
+    C --> D{Time > 0?}
+    D -->|Yes| E[Speed = distance / time]
+    E --> F[Fuel used = distance * fuel consumption / 100]
+    F --> G[Fuel cost = fuel used * price per liter]
+    G --> H[/Display speed, fuel used and fuel cost/]
+    D -->|No| I[/Display invalid travel time/]
+    H --> J([End])
+    I --> J
+```
