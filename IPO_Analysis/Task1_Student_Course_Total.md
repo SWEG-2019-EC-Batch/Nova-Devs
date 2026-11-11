@@ -36,6 +36,4 @@ flowchart TD
     H --> J[/Display total and result/]
     I --> J
     J --> K([End])
-```
 
----
