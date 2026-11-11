@@ -15,6 +15,7 @@ flowchart TD
     E --> G([END])
     F --> G
 ```
+
 ## TASK 2: ELECTRICITY BILL
 
 ### Flowchart
@@ -22,15 +23,16 @@ flowchart TD
 ```mermaid
 flowchart TD
     A([START]) --> B[/Input Electricity Units/]
-    B --> C{Are Units <= 50?}
-    C -->|YES| D[Energy = Units * 1.50]
-    C -->|NO| E[Energy = 75 + (Units - 50) * 2.00]
-    D --> F[Service Charge = 10]
+    B --> C{Units <= 50?}
+    C -->|YES| D["Energy = Units * 1.50"]
+    C -->|NO| E["Energy = 75 + (Units - 50) * 2.00"]
+    D --> F["Service Charge = 10"]
     E --> F
-    F --> G[Total = Energy + Service]
+    F --> G["Total = Energy + Service"]
     G --> H[/Display Energy, Service and Total/]
     H --> I([END])
 ```
+
 ## TASK 3: TRIP SPEED AND FUEL COST
 
 ### Flowchart
